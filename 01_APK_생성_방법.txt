@@ -1,0 +1,23 @@
+AutoControl Monitor v0.2 - APK 만들기
+==================================
+
+주의: 이 압축파일은 APK가 아닙니다. 소스를 APK로 빌드할 준비가 된 프로젝트입니다.
+실제 광고 자동 클릭 / 자동 재실행 기능은 포함되지 않습니다.
+
+[방법 A] Windows + Android Studio (권장)
+1. https://developer.android.com/studio 에서 Android Studio 설치
+2. 이 압축파일을 풀고 Android Studio -> Open에서 폴더를 열기
+3. SDK Platform 35 및 빌드 요구사항 설치, Gradle Sync 완료
+4. 폴더 안 '빌드_APK_윈도우.bat' 더블클릭
+5. 빌드 성공 시 같은 폴더에 'AutoControl_v02_Monitor.apk' 생성
+6. APK 파일을 휴대전화로 옮기고 파일 관리자에서 열어 설치
+   - Android 8.0 이상, 파일 관리자에 '이 출처 허용'이 필요할 수 있습니다.
+
+[방법 B] GitHub Actions 클라우드 빌드 (Android Studio 설치 불필요)
+1. GitHub에 저장소를 만들고 압축을 푼 폴더 속 파일들을 저장소 최상위에 업로드
+   (.github/workflows/build-apk.yml 폴더를 보존해야 함)
+2. GitHub 저장소 -> Actions -> Build AutoControl APK -> Run workflow
+3. 빌드가 성공하면 Artifacts -> AutoControl-v0.2-monitor-debug-apk 다운로드
+4. 압축을 풀면 app-debug.apk 파일이 생성됨. 휴대전화에 전송해 설치
+
+이 환경에서 APK 직접 컴파일/실기기 검증은 진행하지 못했습니다.
